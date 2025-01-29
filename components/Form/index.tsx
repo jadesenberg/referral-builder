@@ -37,7 +37,7 @@ export default function ReferralForm() {
     deleteReferral
   } = useReferralApi()
 
-  const { register, handleSubmit, reset, formState: { errors }, watch } = useForm<Referral>({
+  const { register, handleSubmit, reset, formState: { errors } } = useForm<Referral>({
     resolver: zodResolver(referralSchema),
     defaultValues
   })
